@@ -1,0 +1,23 @@
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="micropost">¿Qué está pasando?</h1>
+        <%= render 'shared/micropost_form' %>
+        <%= render 'shared/feed' %>
+      </td>
+      <td class="sidebar round">
+        <%= render 'shared/user_info' %>
+        <%= render 'shared/stats' %>
+      </td>
+    </tr>
+  </table>
+<% else %>
+  <h1>Granpa</h1>
+
+  <p>
+    Esta es la página principal de Granpa.com.
+  </p>
+
+  <%= link_to "Resgístrate!", signup_path, :class => "signup_button round" %>
+<% end %>

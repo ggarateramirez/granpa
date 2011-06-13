@@ -1,0 +1,2 @@
+class LogoController < ApplicationController
+end
